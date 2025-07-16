@@ -1,0 +1,129 @@
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #fafafa;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #444;
+}
+
+h2 {
+  margin-top: 40px;
+  font-size: 1.5em;
+  color: #555;
+}
+
+h3 {
+  margin: 10px 0 15px;
+  font-size: 1.2em;
+  color: #777;
+}
+
+#malla {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Contenedor de materias por semestre */
+.semestre {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+/* Tarjetas de materias */
+.materia {
+  background-color: #ffffff;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  width: 220px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.materia:hover {
+  transform: scale(1.02);
+}
+
+/* Materias bloqueadas */
+.materia.bloqueada {
+  background-color: #eee;
+  border-color: #bbb;
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Estilos por área cuando están aprobadas */
+.materia.aprobada.administración {
+  background-color: #e5d4f9;
+  border-color: #c9aef0;
+  color: #4d2c7a;
+}
+
+.materia.aprobada["métodos cuantitativos"] {
+  background-color: #fcd6e8;
+  border-color: #f8a3c2;
+  color: #833b5b;
+}
+
+.materia.aprobada["contabilidad e impuestos"] {
+  background-color: #d1f7d1;
+  border-color: #92db92;
+  color: #256b25;
+}
+
+.materia.aprobada["actividades integradoras"] {
+  background-color: #fff5cc;
+  border-color: #f4e28c;
+  color: #7a6a1d;
+}
+
+.materia.aprobada["ciencias sociales y humanísticas"] {
+  background-color: #d6f0ff;
+  border-color: #a9dcf8;
+  color: #2c5d7a;
+}
+
+.materia.aprobada.jurídica {
+  background-color: #ffe1c4;
+  border-color: #ffc28c;
+  color: #8a4b0b;
+}
+
+/* Créditos */
+#creditos {
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Tabla de créditos */
+.tabla-creditos {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 95%;
+  max-width: 600px;
+  font-size: 14px;
+  background-color: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.tabla-creditos th, .tabla-creditos td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.tabla-creditos th {
+  background-color: #f0f0f0;
+  color: #555;
+}
